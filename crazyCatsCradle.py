@@ -8,7 +8,7 @@ for x in range(180):
     myPenColor2 = (random.randint(0,100))/100
     myPenColor3 = (random.randint(0,100))/100
     t.pencolor(myPenColor1,myPenColor2,myPenColor3)
-    t.forward(x)
+    t.forward(x*2)
     t.right(x)
 
 input("Press Enter to continue...")
