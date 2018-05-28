@@ -11,6 +11,21 @@ limitX, limitY = t.screen.screensize()
 numDots = random.randint(10,100)
 
 #blue, aliceblue, white, lightyellow, yellow, orange, red
+#1,1,1,3,7,12,75
+colorList = []
+colorList.append("blue")
+colorList.append("aliceblue")
+colorList.append("white")
+for s in range(3):
+    colorList.append("lightyellow")
+for s in range(7):
+    colorList.append("yellow")
+for s in range(12):
+    colorList.append("orange")
+for s in range(75):
+    colorList.append("orangered1")
+
+print(len(colorList))
 
 for i in range(numDots):
     tx, ty = t.position()
@@ -25,5 +40,7 @@ for i in range(numDots):
         y = random.randint(-1 * limitY,limitY)
         t.goto(x,y)
     t.pendown()    
+    j = random.randint(0,99) 
+    t.pencolor(colorList[j])
 
 input("Press Enter to continue...")
