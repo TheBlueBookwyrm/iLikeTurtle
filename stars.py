@@ -25,8 +25,6 @@ for s in range(12):
 for s in range(75):
     colorList.append("orangered1")
 
-print(len(colorList))
-
 for i in range(numDots):
     tx, ty = t.position()
     t.forward(1)
