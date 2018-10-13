@@ -1,4 +1,30 @@
-import turtle, random
+import turtle
+import random
+import sys
+
+if len(sys.argv) < 3:
+    print("Please call this program as follows:")
+    print("    stars.py lolim hilim")
+    print("where lolim and hilim are integers and lolim <= hilim")
+    exit()
+
+try:
+    dotsLower = int(sys.argv[1])
+except ValueError:
+    print("The value for the LOWER limit of the number of stars must be an integer")
+    exit()
+
+try:
+    dotsUpper = int(sys.argv[2])
+except ValueError:
+    print("The value for the UPPER limit of the number of stars must be an integer")
+    exit()
+
+if dotsUpper >= dotsLower:
+    numDots = random.randint(dotsLower,dotsUpper)
+else:
+    print("The value for the upper limit of stars must be larger than the value for the lower limit.") 
+    exit()
 
 t = turtle.Turtle()
 s = turtle.Screen()
@@ -7,8 +33,6 @@ t.pencolor("white")
 t.hideturtle()
 
 limitX, limitY = t.screen.screensize()
-
-numDots = random.randint(10,100)
 
 #blue, aliceblue, white, lightyellow, yellow, orange, red
 #1,1,1,3,7,12,75
@@ -24,8 +48,6 @@ for s in range(12):
     colorList.append("orange")
 for s in range(75):
     colorList.append("orangered1")
-
-print(len(colorList))
 
 for i in range(numDots):
     tx, ty = t.position()
