@@ -1,5 +1,6 @@
 import turtle
 import random
+import sys
 
 t = turtle.Turtle()
 s = turtle.Screen()
@@ -23,4 +24,7 @@ for i in range(numDots):
         t.goto(x, y)
     t.pendown()    
 
-input("Press Enter to continue...")
+if sys.version_info[0] >= 3:
+    input("Press Enter to continue...")
+else:
+    raw_input("Press Enter to continue...")

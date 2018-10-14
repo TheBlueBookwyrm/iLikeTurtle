@@ -1,5 +1,6 @@
 import turtle
 import random
+import sys
 
 t = turtle.Turtle()
 
@@ -12,4 +13,7 @@ for j in range(i):
     t.forward(j*2)
     t.right(j)
 
-input("Press Enter to continue...")
+if sys.version_info[0] >= 3:
+    input("Press Enter to continue...")
+else:
+    raw_input("Press Enter to continue...")
