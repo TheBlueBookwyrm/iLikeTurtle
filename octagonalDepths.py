@@ -1,4 +1,5 @@
 import turtle
+import sys
 
 t = turtle.Turtle()
 s = turtle.Screen()
@@ -11,4 +12,7 @@ for x in range(i):
     t.forward(x)
     t.right(45)
 
-input("Press Enter to continue...")
+if sys.version_info[0] >= 3:
+    input("Press Enter to continue...")
+else:
+    raw_input("Press Enter to continue...")

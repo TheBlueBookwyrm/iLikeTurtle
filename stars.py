@@ -63,4 +63,7 @@ for i in range(numDots):
     j = random.randint(0, 99)
     t.pencolor(colorList[j])
 
-input("Press Enter to continue...")
+if sys.version_info[0] >= 3:
+    input("Press Enter to continue...")
+else:
+    raw_input("Press Enter to continue...")
