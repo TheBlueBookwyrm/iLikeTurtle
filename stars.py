@@ -22,6 +22,7 @@ except ValueError:
 
 if dotsUpper >= dotsLower:
     numDots = random.randint(dotsLower, dotsUpper)
+    print(str(numDots) + " stars will be plotted")
 else:
     print("The value for the upper limit of stars must be larger than the value for the lower limit.") 
     exit()
