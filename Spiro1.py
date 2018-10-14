@@ -1,4 +1,5 @@
-import turtle, random
+import turtle
+import random
 
 t = turtle.Turtle()
 
@@ -9,7 +10,7 @@ for j in range(i):
     myPenColorG = random.random()
     myPenColorB = random.random()
 
-    t.pencolor(myPenColorR,myPenColorG,myPenColorB)
+    t.pencolor(myPenColorR, myPenColorG, myPenColorB)
     t.forward(200)
     t.right(170)
     
