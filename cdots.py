@@ -17,33 +17,26 @@ limitX, limitY = t.screen.screensize()
 # print(limitX, limitY)
 
 t.penup()
+#t.setx(0)
+#t.sety(0)
+
+mypensize = 1
+
+e = float(limitX)
+f = float(limitY)
+
 t.setx(-limitX)
 t.sety(limitY)
 t.pendown()
 
-mypensize = 1
-
-myLim = 24
-
-e = float(myLim)
-
-for j in range (myLim):
-    for i in range (myLim):
-        for g in range (myLim):
-
-#        print(str(i) + " " + str(j))
-
-            t.pencolor(i/e, j/e, g/e)
-            t.forward(1)
-#        t.penup()
-#        t.forward(1)
-#        t.pendown()
-        t.penup()
-        t.setx(-limitX + (j * myLim))
-#        t.sety(limitY - (i + (j * myLim)))
-        t.sety(limitY - i)
-#        print(limitY, i)
-        t.pendown()
+for j in range (limitX):
+    for i in range (limitY):
+        t.pencolor(i/e, j/f, 1)
+        t.forward(1)
+    t.penup()
+    t.setx(-limitX)
+    t.sety(limitY - j)
+    t.pendown()
 
 print("Process END: " + str(datetime.now()))
 
