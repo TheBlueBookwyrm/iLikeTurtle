@@ -21,29 +21,25 @@ t.setx(-limitX)
 t.sety(limitY)
 t.pendown()
 
-mypensize = 1
+for i in range (limitX * 2):
+    t.forward(1)
 
-myLim = 24
+t.right(90)
 
-e = float(myLim)
+for j in range (limitY * 2):
+    t.forward(1)
 
-for j in range (myLim):
-    for i in range (myLim):
-        for g in range (myLim):
+t.right(90)
 
-#        print(str(i) + " " + str(j))
+for i in range (limitX * 2):
+    t.forward(1)
 
-            t.pencolor(i/e, j/e, g/e)
-            t.forward(1)
-#        t.penup()
-#        t.forward(1)
-#        t.pendown()
-        t.penup()
-        t.setx(-limitX + (j * myLim))
-#        t.sety(limitY - (i + (j * myLim)))
-        t.sety(limitY - i)
-#        print(limitY, i)
-        t.pendown()
+t.right(90)
+
+for j in range (limitY * 2):
+    t.forward(1)
+
+
 
 print("Process END: " + str(datetime.now()))
 
