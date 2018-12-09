@@ -34,6 +34,10 @@ s.bgcolor(0, 0, 0)
 t.pencolor("white")
 t.hideturtle()
 
+c = turtle.Turtle()
+c.pencolor("white")
+c.hideturtle()
+
 limitX, limitY = t.screen.screensize()
 
 # blue, aliceblue, white, lightyellow, yellow, orange, red
@@ -47,6 +51,10 @@ for s in range(12):
     colorList.append("orange")
 for s in range(75):
     colorList.append("orangered1")
+
+t.penup()
+c.penup()
+c.goto(limitX, limitY)
 
 print("\nProcess START: " + str(datetime.now()))
 
@@ -62,9 +70,20 @@ for i in range(numDots):
         x = random.randint(-1 * limitX, limitX)
         y = random.randint(-1 * limitY, limitY)
         t.goto(x, y)
-    t.pendown()    
+#    tx, ty = t.position()
+
+#    t.goto(countx, county)
+#    t.write('__')
+#    t.write(i + 1)
+
+#    t.goto(tx, ty)
+    c.clear()
+    c.write(i+1)
     j = random.randint(0, 99)
     t.pencolor(colorList[j])
+
+    t.pendown()
+
 
 if t.isvisible():
     t.hideturtle()
