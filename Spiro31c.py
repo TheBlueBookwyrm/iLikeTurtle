@@ -26,7 +26,9 @@ for x in range(8):
         t.right(170)
     t.left(45)
 
-t.hideturtle()
+if t.isvisible():
+    t.hideturtle()
+
 print("Process END: " + str(datetime.now()))
 
 if sys.version_info[0] >= 3:

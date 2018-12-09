@@ -19,7 +19,10 @@ for j in range(i):
     t.forward(i)
     turn = random.randint(1, 359)
     t.right(turn)
-    
+
+if t.isvisible():
+    t.hideturtle()
+
 print("Process END: " + str(datetime.now()))
 
 if sys.version_info[0] >= 3:
