@@ -25,7 +25,10 @@ for i in range(numDots):
         x = random.randint(-10, 10)
         y = random.randint(-10, 10)
         t.goto(x, y)
-    t.pendown()    
+    t.pendown()
+
+if t.isvisible():
+    t.hideturtle()
 
 print("Process END: " + str(datetime.now()))
 

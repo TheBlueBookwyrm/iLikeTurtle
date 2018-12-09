@@ -66,6 +66,9 @@ for i in range(numDots):
     j = random.randint(0, 99)
     t.pencolor(colorList[j])
 
+if t.isvisible():
+    t.hideturtle()
+
 print("Process END: " + str(datetime.now()))
 
 if sys.version_info[0] >= 3:
