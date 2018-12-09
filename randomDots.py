@@ -1,6 +1,7 @@
 import turtle
 import random
 import sys
+from datetime import datetime
 
 t = turtle.Turtle()
 s = turtle.Screen()
@@ -9,6 +10,8 @@ t.pencolor("white")
 t.hideturtle()
 
 numDots = random.randint(10, 250)
+
+print("\nProcess START: " + str(datetime.now()))
 
 for i in range(numDots):
     tx, ty = t.position()
@@ -23,6 +26,8 @@ for i in range(numDots):
         y = random.randint(-10, 10)
         t.goto(x, y)
     t.pendown()    
+
+print("Process END: " + str(datetime.now()))
 
 if sys.version_info[0] >= 3:
     input("Press Enter to continue...")

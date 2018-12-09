@@ -1,6 +1,7 @@
 import turtle
 import random
 import sys
+from datetime import datetime
 
 if len(sys.argv) < 3:
     print("Please call this program as follows:")
@@ -47,6 +48,8 @@ for s in range(12):
 for s in range(75):
     colorList.append("orangered1")
 
+print("\nProcess START: " + str(datetime.now()))
+
 for i in range(numDots):
     tx, ty = t.position()
     t.forward(1)
@@ -62,6 +65,8 @@ for i in range(numDots):
     t.pendown()    
     j = random.randint(0, 99)
     t.pencolor(colorList[j])
+
+print("Process END: " + str(datetime.now()))
 
 if sys.version_info[0] >= 3:
     input("Press Enter to continue...")
