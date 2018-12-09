@@ -10,15 +10,20 @@ i = 36
 #t.sety(-250)
 
 for x in range(8):
-    for j in range(i):
-        myPenColorR = 0
-        myPenColorG = 0
-        myPenColorB = x/1
+    myPenColorR = 0
+    myPenColorG = 0
+    fx = float(x)
+    myPenColorB = float(fx) / (fx + 1)
 
-        t.pencolor(myPenColorR, myPenColorG, myPenColorB)
+    t.pencolor(myPenColorR, myPenColorG, myPenColorB)
+
+    for j in range(i):
+
         t.forward(250)
         t.right(170)
     t.left(45)
+
+t.hideturtle()
 
 if sys.version_info[0] >= 3:
     input("Press Enter to continue...")
