@@ -23,8 +23,6 @@ if t.isvisible():
     t.hideturtle()
 
 print("Process END: " + str(datetime.now()))
+print("Please close graphics window to end program.")
 
-if sys.version_info[0] >= 3:
-    input("Press Enter to continue...")
-else:
-    raw_input("Press Enter to continue...")
+turtle.mainloop()
