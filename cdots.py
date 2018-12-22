@@ -60,7 +60,7 @@ for i in range(numDots):
         t.goto(x, y)
 
     c.clear()
-    c.write(i+1)
+    c.write(str(i+1) + " of " + str(numDots))
     j = random.randint(0, 99)
     t.pencolor(random.random(), random.random(), random.random())
 
